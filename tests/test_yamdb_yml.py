@@ -1,4 +1,5 @@
 import os
+import re
 
 from django.conf import settings
 
@@ -13,12 +14,7 @@ class TestWorkflow:
             assert False, 'Проверьте, что добавили файл yamdb_workflow.yaml в корневой каталог для проверки'
 
         assert (
-            (
-                'on:\n'
-                '  push:\n'
-                '    branches:\n'
-                '      - master\n'
-            ) in yamdb or
+            re.search(r'on:\s*push:\s*branches:\s*-\smaster', yamdb) or
             'on: [push]' in yamdb or
             'on: push' in yamdb 
         ), 'Проверьте, что добавили действие при пуше в файл yamdb_workflow.yaml' 
