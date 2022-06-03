@@ -1,9 +1,8 @@
 import csv
+
 from django.core.management.base import BaseCommand
-
-from users.models import User
 from reviews.models import Category, Genre, Title
-
+from users.models import User
 
 FILE_PREFIX = 'static/data/'
 
