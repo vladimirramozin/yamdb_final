@@ -1,5 +1,4 @@
-from django.contrib import admin
-
+from django.contrib import admincd
 from reviews.models import Category, Comment, Genre, Review, Title
 
 admin.site.register(Category)
