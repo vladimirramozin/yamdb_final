@@ -1,6 +1,5 @@
 import random
 
-from api_yamdb.settings import ADMIN_EMAIL
 from django.core.mail import send_mail
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
@@ -12,6 +11,8 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
+
+from api_yamdb.settings import ADMIN_EMAIL
 
 from .filters import TitleFilterSet
 from .mixins import CreateListRetrievDeletePatchViewSet, NoRetriveUpdateViewSet
