@@ -10,9 +10,9 @@ from rest_framework.decorators import action, api_view
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
+
 from .filters import TitleFilterSet
 from .mixins import CreateListRetrievDeletePatchViewSet, NoRetriveUpdateViewSet
 from .permissions import (UserIsAdmin, UserIsAdminOrReadOnly,
