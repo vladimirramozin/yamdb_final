@@ -4,7 +4,7 @@ RUN mkdir /app
 
 COPY api_yamdb/requirements.txt /app
 
-RUN pip3 install -r ./requirements.txt --no-cache-dir
+RUN pip3 install -r /requirements.txt --no-cache-dir
 
 COPY api_yamdb/ /app
 
